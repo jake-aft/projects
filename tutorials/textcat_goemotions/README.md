@@ -71,7 +71,7 @@ custom config). For instance, you could edit the
 
 ```ini
 [components.textcat.model.tok2vec.encode]
-@architectures = "spacy.MaxoutWindowEncoder.v1"
+@architectures = "spacy.MaxoutWindowEncoder.v2"
 width = 32
 depth = 4
 window_size = 1
@@ -88,7 +88,7 @@ git commit configs/my_new_config.cfg metrics/my_new_config.cfg -m "Scores TODO%"
 
 You can also run experiments in a more lightweight way by running `spacy train`
 directly and
-[overwriting](https://nightly.spacy.io/usage/training#config-overrides)
+[overwriting](https://spacy.io/usage/training#config-overrides)
 hyperparameters on the command line:
 
 ```bash
@@ -130,8 +130,8 @@ models from the tagger and NER. This requires three changes to the config.
 
 ### Using embeddings from a spaCy package
 
-First, download an existing trained pipeline with word vectors. 
-The word vectors of this model can then be specified in `paths.vectors` 
+First, download an existing trained pipeline with word vectors.
+The word vectors of this model can then be specified in `paths.vectors`
 or `initialize.vectors`.
 
 ```bash
@@ -148,8 +148,8 @@ Uncomment the asset in your [`project.yml`](project.yml):
 
 ```yaml
 assets:
-  - dest: 'assets/vectors.zip'
-    url: 'https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip'
+  - dest: "assets/vectors.zip"
+    url: "https://dl.fbaipublicfiles.com/fasttext/vectors-english/crawl-300d-2M.vec.zip"
 ```
 
 Then download the asset and run the `init-vectors` command:

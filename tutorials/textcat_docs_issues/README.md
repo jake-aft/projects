@@ -1,8 +1,8 @@
 <!-- SPACY PROJECT: AUTO-GENERATED DOCS START (do not remove) -->
 
-# 🪐 spaCy Project: Predicting whether a GitHub issue is about docs (Text Classification)
+# 🪐 spaCy Project: Predicting whether a GitHub issue is about documentation (Text Classification)
 
-This project uses [spaCy](https://spacy.io) with annotated data from [Prodigy](https://prodi.gy) to train a **binary text classifier with exclusive classes** to predict whether a GitHub issue title is about documentation.
+This project uses [spaCy](https://spacy.io) with annotated data from [Prodigy](https://prodi.gy) to train a **binary text classifier** to predict whether a GitHub issue title is about documentation. The pipeline uses the component `textcat_multilabel` in order to train a binary classifier using only one label, which can be True or False for each document. An equivalent alternative for a binary text classifier would be to use the `textcat` component with two labels, where exactly one of the two labels is True for each document.
 
 ## 📋 project.yml
 
@@ -50,7 +50,7 @@ in the project directory.
 
 Labelling the data with [Prodigy](https://prodi.gy) took about two hours and was
 done manually using the binary classification interface. The raw text was
-sourced from the from the [GitHub API](https://developer.github.com/v3/) using
+sourced from the [GitHub API](https://developer.github.com/v3/) using
 the search queries `"docs"`, `"documentation"`, `"readme"` and `"instructions"`.
 
 ### Training and evaluation data format
